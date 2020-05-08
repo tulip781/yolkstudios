@@ -77,15 +77,6 @@ module.exports = {
                 use: ['babel-loader'],
             },
             {
-                enforce: 'pre',
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'eslint-loader',
-                options: {
-                    emitWarning: true,
-                }
-            },
-            {
                 test: /\.(css|scss)$/,
                 exclude: /node_modules/,
                 use: [

@@ -1,6 +1,4 @@
-import $ from 'jquery';
 
-import './module/cat';
+import { initThree } from './module/threee.js';
 
-window.$ = $;
-window.jQuery = $;
+initThree();
