@@ -4,6 +4,7 @@ const path = require('path');
 const webpack = require('webpack');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 const htmlFileNames = fs.readdirSync('./src/html/');
 
@@ -25,7 +26,9 @@ const getPlugins = () => {
         new webpack.HotModuleReplacementPlugin(),
         new FriendlyErrorsWebpackPlugin({
             clearConsole: true,
-        })
+        }),
+        new FaviconsWebpackPlugin('./src/assets/img/m.jpg') // svg works too!
+
     ];
     htmlFileNames.forEach(filename => {
         const splitted = filename.split('.');
