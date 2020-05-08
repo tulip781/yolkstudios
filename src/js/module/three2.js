@@ -30,7 +30,7 @@ camera.position.x = farDist * -2;
 camera.position.z = 500;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setClearColor("#F7F6F1"); // Backgrond Color - Blue
+renderer.setClearColor("#F7F2EC"); // Backgrond Color - Blue
 renderer.setPixelRatio(window.devicePixelRatio); // For HiDPI devices to prevent bluring output canvas
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
@@ -43,7 +43,7 @@ const cubeSize = 10;
 const geometry = new THREE.BoxBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
 const material = new THREE.MeshBasicMaterial( { color: '#94F943' } ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
-for (let i = 0; i < 0; i++) {
+for (let i = 0; i < 150; i++) {
   const mesh = new THREE.Mesh(geometry, material);
   const dist = farDist / 3;
   const distDouble = dist * 2;

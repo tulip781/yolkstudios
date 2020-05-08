@@ -1,6 +1,8 @@
-
+body {
+  cursor:crosshair;
+}
 .main-title {
-  font-family: GTFTeknoTRIAL-One;
+  font-family: GTFTeknoTRIAL-Two;
   font-size: 5vw;
   font-weight: lighter;
   position: absolute;
@@ -26,4 +28,9 @@
   padding: 0;
   text-align: center;
   z-index: 2;
+}
+
+#canvas-wrapper {
+  height: 100vh;
+  width: 100vw;
 }
