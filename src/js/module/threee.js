@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import * as AsciiEffect from 'three-asciieffect';
 import * as TrackballControls from  'three-trackballcontrols';
+import * as OrbitControls from 'three-orbit-controls';
 
 const initThree = () => {
 
@@ -52,7 +53,6 @@ var camera, controls, scene, renderer, effect;
 
         document.body.appendChild( effect.domElement );
 
-        controls = new TrackballControls( camera, effect.domElement );
 
         //
 
@@ -88,7 +88,7 @@ var camera, controls, scene, renderer, effect;
         sphere.rotation.x = timer * 0.0003;
         sphere.rotation.z = timer * 0.0002;
 
-        controls.update();
+
 
         effect.render( scene, camera );
 
