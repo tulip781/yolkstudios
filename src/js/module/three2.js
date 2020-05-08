@@ -41,9 +41,9 @@ document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
 // CREATE CUBES
 const cubeSize = 120;
 const geometry = new THREE.BoxBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
-const material = new THREE.MeshBasicMaterial( { color: '#204D8F' } ); // Maps the normal vectors to RGB colors
+const material = new THREE.MeshBasicMaterial( { color: '#94F943' } ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
-for (let i = 0; i < 350; i++) {
+for (let i = 0; i < 0; i++) {
   const mesh = new THREE.Mesh(geometry, material);
   const dist = farDist / 3;
   const distDouble = dist * 2;
@@ -68,15 +68,15 @@ scene.add(group);
 const loader = new THREE.FontLoader();
 const textMesh = new THREE.Mesh();
 const createTypo = font => {
-  const word = "Mannequin Collective";
+  const word = "MANNEQUIN";
   const typoProperties = {
     font: font,
     size: cubeSize,
-    height: cubeSize / 2,
-    curveSegments: 12,
+    height: 20,
+    curveSegments: 3,
     bevelEnabled: true,
-    bevelThickness: 10,
-    bevelSize: 6,
+    bevelThickness: 1,
+    bevelSize: 2,
     bevelOffset: 1,
     bevelSegments: 8
   };
@@ -86,6 +86,9 @@ const createTypo = font => {
   textMesh.position.x = cubeSize * -2;
   textMesh.position.z = cubeSize * -1;
   scene.add(textMesh);
+
+
+
 };
 loader.load(
   "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
