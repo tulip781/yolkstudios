@@ -1,17 +1,29 @@
-@import "variables/media";
 
-@import "mixin/media";
+.main-title {
+  font-family: Roboto;
+  font-size: 5vw;
+  font-weight: lighter;
+  position: absolute;
+  top: 45vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+}
 
-@import "util/grid";
 
-@import "lib/normalize";
-
-@import "modifier/margin";
-
-@import 'base/base';
-@import 'base/fonts';
-
-@import 'module/cat';
-
-
-
+.main-title-2 {
+  font-family: Roboto;
+  font-size: 2vw;
+  font-weight: lighter;
+  position: absolute;
+  top: 55vh;
+  left: 50vw;
+  transform: translate(-50%, -50%) scale(1);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  z-index: 2;
+}
