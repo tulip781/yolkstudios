@@ -1,33 +1,99 @@
 import * as THREE from 'three';
-
+import * as AsciiEffect from 'three-asciieffect';
+import * as TrackballControls from  'three-trackballcontrols';
 
 const initThree = () => {
 
+var camera, controls, scene, renderer, effect;
 
-  var scene = new THREE.Scene();
-  var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+      var sphere, plane;
 
-  var renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerWidth, window.innerHeight );
-  document.body.appendChild( renderer.domElement );
+      var start = Date.now();
 
-  var geometry = new THREE.BoxGeometry();
-  var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-  var cube = new THREE.Mesh( geometry, material );
-  scene.add( cube );
+      init();
+      animate();
 
-  camera.position.z = 5;
+      function init() {
 
-  var animate = function () {
-    requestAnimationFrame( animate );
+        camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 1, 1000 );
+        camera.position.y = 150;
+        camera.position.z = 500;
 
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+        scene = new THREE.Scene();
 
-    renderer.render( scene, camera );
-  };
+        var light = new THREE.PointLight( 0xffffff );
+        light.position.set( 500, 500, 500 );
+        scene.add( light );
 
-  animate();
+        var light = new THREE.PointLight( 0xffffff, 0.25 );
+        light.position.set( - 500, - 500, - 500 );
+        scene.add( light );
+
+        sphere = new THREE.Mesh( new THREE.SphereBufferGeometry( 200, 20, 10 ), new THREE.MeshPhongMaterial( { flatShading: true } ) );
+        scene.add( sphere );
+
+        // Plane
+
+        plane = new THREE.Mesh( new THREE.PlaneBufferGeometry( 400, 400 ), new THREE.MeshBasicMaterial( { color: 0xe0e0e0 } ) );
+        plane.position.y = - 200;
+        plane.rotation.x = - Math.PI / 2;
+        scene.add( plane );
+
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize( window.innerWidth, window.innerHeight );
+
+        effect = new AsciiEffect( renderer, ' .:-+*=%@#', { invert: true } );
+        effect.setSize( window.innerWidth, window.innerHeight );
+        effect.domElement.style.color = 'black';
+        effect.domElement.style.backgroundColor = 'white';
+
+        // Special case: append effect.domElement, instead of renderer.domElement.
+        // AsciiEffect creates a custom domElement (a div container) where the ASCII elements are placed.
+
+        document.body.appendChild( effect.domElement );
+
+        controls = new TrackballControls( camera, effect.domElement );
+
+        //
+
+        window.addEventListener( 'resize', onWindowResize, false );
+
+      }
+
+      function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize( window.innerWidth, window.innerHeight );
+        effect.setSize( window.innerWidth, window.innerHeight );
+
+      }
+
+      //
+
+      function animate() {
+
+        requestAnimationFrame( animate );
+
+        render();
+
+      }
+
+      function render() {
+
+        var timer = Date.now() - start;
+
+        sphere.position.y = Math.abs( Math.sin( timer * 0.002 ) ) * 150;
+        sphere.rotation.x = timer * 0.0003;
+        sphere.rotation.z = timer * 0.0002;
+
+        controls.update();
+
+        effect.render( scene, camera );
+
+      }
+
 
 }
 
