@@ -27,7 +27,7 @@ const getPlugins = () => {
         new FriendlyErrorsWebpackPlugin({
             clearConsole: true,
         }),
-        new FaviconsWebpackPlugin('./src/assets/img/m.jpg') // svg works too!
+        new FaviconsWebpackPlugin('./src/assets/img/m.png') // svg works too!
 
     ];
     htmlFileNames.forEach(filename => {

@@ -1,8 +1,9 @@
 body {
   cursor:crosshair;
+  margin: 0px;
 }
 .main-title {
-  font-family: GTFTeknoTRIAL-Two;
+  font-family: BRRRTrial-Skrrt;
   font-size: 5vw;
   font-weight: lighter;
   position: absolute;
@@ -13,6 +14,7 @@ body {
   padding: 0;
   text-align: center;
   z-index: 2;
+  color: white;
 }
 
 
@@ -28,6 +30,7 @@ body {
   padding: 0;
   text-align: center;
   z-index: 2;
+  color: white;
 }
 
 #canvas-wrapper {
