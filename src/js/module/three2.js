@@ -30,7 +30,7 @@ camera.position.x = farDist * -2;
 camera.position.z = 500;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
-renderer.setClearColor("#00000"); // Backgrond Color - Blue
+renderer.setClearColor("#F7F2EC"); // Backgrond Color - Blue
 renderer.setPixelRatio(window.devicePixelRatio); // For HiDPI devices to prevent bluring output canvas
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
@@ -41,7 +41,7 @@ document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
 // CREATE CUBES
 const cubeSize = 10;
 const geometry = new THREE.BoxBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
-const material = new THREE.MeshBasicMaterial( { color: '#FFFFFF' } ); // Maps the normal vectors to RGB colors
+const material = new THREE.MeshBasicMaterial( { color: '#94F943' } ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
 for (let i = 0; i < 150; i++) {
   const mesh = new THREE.Mesh(geometry, material);
@@ -91,7 +91,7 @@ const createTypo = font => {
 
 };
 loader.load(
-  "../../assets/.json",
+  "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
   createTypo
 );
 
