@@ -41,6 +41,8 @@ body {
 #canvas-wrapper {
   height: 100vh;
   width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 .clients {
@@ -69,4 +71,13 @@ body {
 .info:hover{
   text-decoration: underline;
   cursor: pointer;
+}
+
+.scroll {
+    font-family: GTFEkstraTRIAL-Regular;
+    margin-top: 100vh;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 100vh;
+    text-align: center;
 }
