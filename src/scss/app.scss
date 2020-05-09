@@ -1,10 +1,11 @@
 body {
   cursor:crosshair;
   margin: 0px;
+  background-color: #F7F2EC;
 }
 .main-title {
-  font-family: SangBleuVersaillesTrial-Regular;
-  font-size: 5vw;
+  font-family: SuisseIntlMono-Regular;
+  font-size: 7vw;
   font-weight: lighter;
   position: absolute;
   top: 40vh;
@@ -15,6 +16,10 @@ body {
   text-align: center;
   z-index: 2;
   color: black;
+  line-height: 90px;
+  @media screen and (max-width: 900px) {
+    line-height: initial;
+  }
 }
 
 
@@ -23,7 +28,7 @@ body {
   font-size: 20px;
   font-weight: lighter;
   position: absolute;
-  top: 60vh;
+  top: 57vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
@@ -40,17 +45,28 @@ body {
 
 .clients {
   position: absolute;
-  left: 10;
+  left: 20px;
   z-index: 2;
+  top: 20px;
   margin: 0px;
   font-family: GTFEkstraTRIAL-Regular;
 }
 
+.clients:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .info{
   position: absolute;
-  top: 0;
-  right: 10;
+  top: 20px;
+  right: 20px;
   margin: 0px;
   z-index: 2;
   font-family: GTFEkstraTRIAL-Regular;
+}
+
+.info:hover{
+  text-decoration: underline;
+  cursor: pointer;
 }

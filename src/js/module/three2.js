@@ -27,7 +27,7 @@ const camera = new THREE.PerspectiveCamera(
   farDist
 );
 camera.position.x = farDist * -2;
-camera.position.z = 500;
+camera.position.z = 400;
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setClearColor("#F7F2EC"); // Backgrond Color - Blue
@@ -39,11 +39,11 @@ document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
 
 
 // CREATE CUBES
-const cubeSize = 10;
+const cubeSize = 15;
 const geometry = new THREE.BoxBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
-const material = new THREE.MeshBasicMaterial( { color: '#94F943' } ); // Maps the normal vectors to RGB colors
+const material = new THREE.MeshBasicMaterial( { color: '#FE5302' } ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
-for (let i = 0; i < 150; i++) {
+for (let i = 0; i < 550; i++) {
   const mesh = new THREE.Mesh(geometry, material);
   const dist = farDist / 3;
   const distDouble = dist * 2;
@@ -91,7 +91,7 @@ const createTypo = font => {
 
 };
 loader.load(
-  "https://threejs.org/examples/fonts/helvetiker_regular.typeface.json",
+  "https://threejs.org/examples/fonts/helvetikear.typeface.json",
   createTypo
 );
 
@@ -102,8 +102,8 @@ const mouseFX = {
   windowHalfX: window.innerWidth / 2,
   windowHalfY: window.innerHeight / 2,
   coordinates: function(coordX, coordY) {
-    mouseX = (coordX - mouseFX.windowHalfX) * 10;
-    mouseY = (coordY - mouseFX.windowHalfY) * 10;
+    mouseX = (coordX - mouseFX.windowHalfX) * 4;
+    mouseY = (coordY - mouseFX.windowHalfY) * 4;
   },
   onMouseMove: function(e) {
     mouseFX.coordinates(e.clientX, e.clientY);
@@ -121,8 +121,8 @@ const render = () => {
 
   // Camera animation
   // Works with onMouseMove and onTouchMove functions
-  camera.position.x += (mouseX - camera.position.x) * 0.05;
-  camera.position.y += (mouseY * -1 - camera.position.y) * 0.05;
+  camera.position.x += (mouseX - camera.position.x) * 0.04;
+  camera.position.y += (mouseY * -1 - camera.position.y) * 0.04;
   camera.lookAt(scene.position); // Rotates the object to face a point in world space
 
   const t = Date.now() * 0.001;
