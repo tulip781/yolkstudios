@@ -19,7 +19,7 @@ body {
 }
 
 .blur {
-  filter: blur(15px);
+  filter: blur(10px);
   transition: filter .5s ease;
 }
 
@@ -42,12 +42,13 @@ body {
   z-index: 2;
   color: black;
   line-height: 90px;
+  width: 50%;
   white-space: nowrap;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 600px) {
     line-height: initial;
     white-space: normal;
     font-size: 7vw;
-    top: 40vh;
+    top: 47vh;
   }
 }
 
@@ -66,11 +67,11 @@ body {
   z-index: 2;
   color: black;
   width: 50%;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 600px) {
     line-height: initial;
     white-space: normal;
     font-size: 20px;
-    top: 57vh;
+    top: 53vh;
   }
 }
 
@@ -141,4 +142,8 @@ body {
   justify-content: center;
   align-items: center;
 
+}
+
+.panel {
+  margin-bottom: 40px;
 }
