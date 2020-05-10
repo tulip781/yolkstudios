@@ -19,10 +19,14 @@ body {
 }
 
 .blur {
-  filter: blur(10px);
-  transition: filter .1s ease;
+  filter: blur(15px);
+  transition: filter .5s ease;
 }
 
+.mini-title {
+  font-family: SuisseIntlMono-Regular;
+  font-size: 15px;
+}
 
 .main-title {
   font-family: SuisseIntlMono-Regular;
@@ -41,7 +45,7 @@ body {
   white-space: nowrap;
   @media screen and (max-width: 900px) {
     line-height: initial;
-    white-space: initial;
+    white-space: normal;
     font-size: 7vw;
     top: 40vh;
   }
@@ -64,7 +68,7 @@ body {
   width: 50%;
   @media screen and (max-width: 900px) {
     line-height: initial;
-    white-space: initial;
+    white-space: normal;
     font-size: 20px;
     top: 57vh;
   }
@@ -75,6 +79,7 @@ body {
   width: 100vw;
   position: fixed;
   top: 0;
+  transition: filter .2s ease;
 
 }
 
@@ -132,5 +137,8 @@ body {
   font-size: 10px;
   width: 100%;
   scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
