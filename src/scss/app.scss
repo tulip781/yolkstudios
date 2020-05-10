@@ -18,13 +18,18 @@ body {
   background-color: #F7F2EC;
 }
 
+.blur {
+  filter: blur(10px);
+  transition: filter .1s ease;
+}
+
 
 .main-title {
   font-family: SuisseIntlMono-Regular;
   font-size: 4vw;
   font-weight: lighter;
   position: absolute;
-  top: 40vh;
+  top: 43vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
@@ -38,6 +43,7 @@ body {
     line-height: initial;
      white-space: initial;
      font-size: 7vw;
+     top: 40vh;
   }
 }
 
@@ -58,7 +64,7 @@ body {
   @media screen and (max-width: 900px) {
     line-height: initial;
     white-space: initial;
-    font-size: 7vw;
+    font-size: 20px;
     top: 57vh;
   }
 }
@@ -68,6 +74,7 @@ body {
   width: 100vw;
   position: fixed;
   top: 0;
+
 }
 
 .clients {
@@ -99,10 +106,12 @@ body {
 }
 
 .scroll {
-    font-family: GTFEkstraTRIAL-Regular;
-    margin-top: 100vh;
-    position: relative;
-    z-index: 10;
-    margin-bottom: 100vh;
-    text-align: center;
+  font-family: GTFEkstraTRIAL-Regular;
+  margin-top: 100vh;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 40vh;
+  text-align: center;
+  font-size: 10px;
+
 }
