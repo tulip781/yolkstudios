@@ -28,7 +28,7 @@ body {
   font-family: SuisseIntlMono-Regular;
   font-size: 4vw;
   font-weight: lighter;
-  position: absolute;
+  position: relative;
   top: 43vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
@@ -41,9 +41,9 @@ body {
   white-space: nowrap;
   @media screen and (max-width: 900px) {
     line-height: initial;
-     white-space: initial;
-     font-size: 7vw;
-     top: 40vh;
+    white-space: initial;
+    font-size: 7vw;
+    top: 40vh;
   }
 }
 
@@ -52,8 +52,8 @@ body {
   font-family: GTFEkstraTRIAL-Regular;
   font-size: 20px;
   font-weight: lighter;
-  position: absolute;
-  top: 52vh;
+  position: relative;
+  top: 40vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
@@ -61,6 +61,7 @@ body {
   text-align: center;
   z-index: 2;
   color: black;
+  width: 50%;
   @media screen and (max-width: 900px) {
     line-height: initial;
     white-space: initial;
@@ -105,13 +106,31 @@ body {
   cursor: pointer;
 }
 
+
+.placeholder {
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+.container {
+  margin: 0px;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: smooth;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+
+}
 .scroll {
   font-family: GTFEkstraTRIAL-Regular;
-  margin-top: 100vh;
+  margin-top: 0;
   position: relative;
   z-index: 10;
-  margin-bottom: 40vh;
+  height: 100vh;
   text-align: center;
   font-size: 10px;
+  width: 100%;
+  scroll-snap-align: start;
 
 }
