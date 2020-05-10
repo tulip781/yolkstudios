@@ -1,11 +1,27 @@
+@font-face {
+   font-family: 'SuisseIntlMono-Regular';
+   src:  url('./assets/SuisseIntlMono-Regular.otf') format('otf');
+   font-weight: 600;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'GTFEkstraTRIAL-Regular';
+   src:  url('./assets/GTFEkstraTRIAL-Regular.otf') format('otf');
+   font-weight: 600;
+   font-style: normal;
+}
+
 body {
   cursor:crosshair;
   margin: 0px;
   background-color: #F7F2EC;
 }
+
+
 .main-title {
   font-family: SuisseIntlMono-Regular;
-  font-size: 7vw;
+  font-size: 4vw;
   font-weight: lighter;
   position: absolute;
   top: 40vh;
@@ -17,8 +33,11 @@ body {
   z-index: 2;
   color: black;
   line-height: 90px;
+  white-space: nowrap;
   @media screen and (max-width: 900px) {
     line-height: initial;
+     white-space: initial;
+     font-size: 7vw;
   }
 }
 
@@ -28,7 +47,7 @@ body {
   font-size: 20px;
   font-weight: lighter;
   position: absolute;
-  top: 57vh;
+  top: 52vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
@@ -36,6 +55,12 @@ body {
   text-align: center;
   z-index: 2;
   color: black;
+  @media screen and (max-width: 900px) {
+    line-height: initial;
+    white-space: initial;
+    font-size: 7vw;
+    top: 57vh;
+  }
 }
 
 #canvas-wrapper {
