@@ -8,5 +8,20 @@ import { blurInit } from './module/blur.js';
 
 import * as PointerLockControls from 'three-pointer-lock-controls';
 
-initThree2();
-blurInit();
+
+
+let page = window.location.pathname
+
+if (page === '/pagetwo.html') {
+  blurInit();
+
+}
+if (page === '/') {
+  initThree2();
+  blurInit();
+}
+
+
+
+
+
