@@ -41,13 +41,13 @@ document.querySelector("#canvas-wrapper").appendChild(renderer.domElement);
 
 
 // CREATE CUBES
-const cubeSize = 200;
+const cubeSize = 300;
 const geometry = new THREE.SphereBufferGeometry(cubeSize, cubeSize, cubeSize); // BufferAttribute allows for more efficient passing of data to the GPU
 const material = new THREE.MeshBasicMaterial( { color: '#FEDD00' } ); // Maps the normal vectors to RGB colors
 const group = new THREE.Group();
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 60; i++) {
   const mesh = new THREE.Mesh(geometry, material);
-  const dist = farDist / 2;
+  const dist = farDist / 1.5;
   const distDouble = dist * 2;
   const tau = 2 * Math.PI; // One turn
 
