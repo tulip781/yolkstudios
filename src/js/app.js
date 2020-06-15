@@ -17,7 +17,7 @@ if (page === '/pagetwo.html') {
 
 }
 if (page === '/') {
-  initThree2();
+  // initThree2();
   blurInit();
 }
 
