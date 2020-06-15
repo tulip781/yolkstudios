@@ -11,16 +11,12 @@ import * as PointerLockControls from 'three-pointer-lock-controls';
 
 let page = window.location.pathname
 
-if (page === '/pagetwo.html') {
-  blurInit();
 
-}
-if (page === '/') {
-  initThree2();
-  blurInit();
-}
+initThree2();
+blurInit();
 
 
 
+console.log("YO");
 
 

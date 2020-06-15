@@ -16,6 +16,8 @@ const initThree2 = () => {
  * By ilithya | 2019
  */
 
+console.log("Hello - this has been called on the page")
+
 const nearDist = 0.1;
 const farDist = 5000;
 
