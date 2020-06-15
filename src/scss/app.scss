@@ -34,10 +34,10 @@ body {
   font-family: acumin-pro,sans-serif;
 font-weight: 600;
 font-style: normal;
-  font-size: 4vw;
+  font-size: 14vw;
   font-weight: lighter;
   position: relative;
-  top: 43vh;
+  top: 40vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
@@ -46,12 +46,11 @@ font-style: normal;
   z-index: 2;
   color: black;
   line-height: 90px;
-  width: 50%;
   white-space: nowrap;
   @media screen and (max-width: 600px) {
     line-height: initial;
     white-space: normal;
-    font-size: 7vw;
+    font-size: 15vw;
     top: 43vh;
   }
 }
@@ -62,7 +61,7 @@ font-style: normal;
   font-size: 20px;
   font-weight: lighter;
   position: relative;
-  top: 42vh;
+  top: 46vh;
   left: 50vw;
   transform: translate(-50%, -50%) scale(1);
   margin: 0;
