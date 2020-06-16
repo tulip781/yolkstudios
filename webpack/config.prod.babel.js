@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 
 const htmlFileNames = fs.readdirSync('./src/html/');
 
@@ -34,7 +35,8 @@ const getPlugins = () => {
         new ExtractTextPlugin({
             filename: './assets/css/styles.css',
             allChunks: true
-        })
+        }),
+        new FaviconsWebpackPlugin('./src/assets/img/m5.png')
     ];
     htmlFileNames.forEach(filename => {
         if (filename.substr(0, 1) !== '_') {
