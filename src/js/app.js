@@ -20,3 +20,16 @@ blurInit();
 console.log("YO");
 
 
+const main = document.querySelector('.main-title');
+const maintwo = document.querySelector('.main-title-2');
+
+
+
+
+const yo = () => {
+  main.classList.add('fade-in');
+  maintwo.classList.add('fade-in');
+}
+
+
+setTimeout(yo(), 3000);

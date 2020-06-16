@@ -18,6 +18,7 @@ body {
   background-color: #F7F2EC;
 }
 
+
 .blur {
   filter: blur(10px);
   transition: filter .5s ease;
@@ -28,6 +29,7 @@ body {
   font-weight: 600;
   font-style: normal;
   font-size: 15px;
+
 }
 
 .main-title {
@@ -46,6 +48,8 @@ font-style: normal;
   color: black;
   line-height: 90px;
   white-space: nowrap;
+
+
   @media screen and (max-width: 600px) {
     line-height: initial;
     white-space: normal;
