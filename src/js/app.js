@@ -4,7 +4,6 @@ import * as OrbitControls  from 'three-orbit-controls';
 import { initThree2 } from './module/three2.js';
 import { blurInit } from './module/blur.js';
 
-import Icon from '../assets/img/m5.png';
 
 import * as PointerLockControls from 'three-pointer-lock-controls';
 

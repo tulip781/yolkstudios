@@ -67,8 +67,15 @@ module.exports = {
                 test: /\.(html)$/,
                 loader: path.resolve(__dirname, 'loader/html-loader.js'),
                 options: {
-                    html: htmlFileNames
-                }
+                  html: htmlFileNames,
+                  list: [
+                    {
+                      tag: 'img',
+                      attribute: 'src',
+                      type: 'src',
+                    }
+                  ]
+              }
             },
             {
                 test: /\.(js)$/,
@@ -103,6 +110,12 @@ module.exports = {
                     ]
                 })
             },
+                      {
+            test: /\.(png|svg|jpg|gif)$/,
+            use: [
+              'file-loader',
+            ],
+          },
         ],
     },
     resolve: {
